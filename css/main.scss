@@ -1,0 +1,459 @@
+// variables
+$crim: rgb(138, 21, 56);
+$crim-a: rgb(110, 16, 44);
+$black: rgb(21, 21, 21);
+$white: rgb(255, 255, 255);
+$grey: rgb(115, 113, 109);
+
+// globals 
+html {
+    font-family: 'Open Sans', arial, sans-serif;
+}
+
+a.btn.btn-outline-secondary {
+    border-radius: 0;
+    border-color: $grey;
+    color: $grey;
+
+    &:hover {
+        background-color: transparent;
+        border-color: $crim;
+        color: $crim;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        padding: 1rem;
+    }
+}
+
+
+
+
+// HEADER
+header {
+    .logo {
+        border: 1px solid $black;
+        color: $black;
+        padding: 1rem 0.5em;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+
+    .phone_number {}
+
+    .phone_number,
+    .social {
+        font-size: 22px;
+
+        a {
+            color: $grey;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// NAVIGATION
+nav {
+    &.navigation.desktop {
+        margin: 0 auto;
+        background: $crim;
+        padding: 25px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 2rem;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &.active {
+                border-bottom: 1px solid #fff;
+                padding-bottom: 5px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+    }
+
+
+
+    &.desktop {
+        justify-content: center;
+    }
+}
+
+
+// HOMEPAGE & MORE
+.header {
+
+    &>h1 {
+        padding: 1rem 1rem 1.5rem;
+        border: 1rem solid $crim;
+
+
+        a {
+            color: $black;
+
+            &:hover {
+                color: $crim;
+            }
+        }
+    }
+
+    &>h2 {
+        margin-bottom: 0;
+        padding: 0 1rem 0;
+    }
+
+    .openings_cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        img {
+            // height: 468px;
+            // margin: 0 auto;
+            width: 458px;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $crim;
+                }
+            }
+        }
+
+        .unit {
+            border: 5px solid $crim-a;
+            background-color: $crim;
+            color: $white;
+            padding: 5px;
+            margin: 10px 0;
+        }
+
+        .view_property {
+            a.btn.btn-outline-secondary {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    text-align: center;
+    padding: 3rem 1rem 0;
+
+    &.footer_sm {
+        padding-top: 0;
+    }
+
+    a.btn.btn-outline-secondary {
+        width: 40%;
+        margin: 1rem 2rem 0;
+    }
+
+    p {
+        &.copyright {
+            margin-top: 2rem;
+        }
+    }
+}
+
+
+
+// ================================
+//         ABOUT US PAGE
+// ================================
+.about_us {
+    padding: 0 1rem;
+    text-align: center;
+
+    img {
+        height: 500px;
+        margin: 2rem 0;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+// ================================
+//         CONTACT PAGE
+// ================================
+.inquiry_form {
+    max-width: 1200px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+// DESKTOP SCREEN
+@media (min-width: 1050px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding: 1.5rem 1rem;
+        align-items: center;
+
+        &.mobile {
+            display: none;
+        }
+    }
+
+    nav.desktop {
+        display: flex;
+    }
+
+    nav.mobile {
+        display: none;
+    }
+
+    .section_wrapper {
+        margin: 2rem 0rem 0;
+
+        &.openings_cta {
+            margin: 0;
+        }
+    }
+
+    // HOMEPAGE & MORE
+    .header {
+
+        &>h1 {
+            padding: 1rem 1rem 1.5rem;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom-color: $crim;
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $crim;
+                }
+            }
+        }
+
+        .openings_cta {
+
+            img {
+                height: 458px;
+            }
+
+            &>div {
+                color: $black;
+                margin: 0 1rem;
+            }
+
+            .view_property {
+                a.btn.btn-outline-secondary {
+                    margin-top: .75rem;
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    footer {
+
+        a.btn.btn-outline-secondary {
+            width: 33%;
+            margin: 1rem;
+        }
+
+        p {
+            &.copyright {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    // ================================
+    //         ABOUT US PAGE
+    // ================================
+    .about_us {
+        padding: 0 15rem;
+
+        img {}
+
+        p {}
+    }
+
+}
+
+
+// MOBILE SCREEN
+@media (max-width: 1049px) {
+    header {
+        &.mobile {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+                "phone"
+                "logo";
+            text-align: center;
+
+            .phone_number {
+                grid-area: phone;
+                font-size: 22px;
+                padding: 16px 0;
+
+                a {
+                    color: rgb(115, 113, 109);
+                    text-decoration: none;
+                }
+            }
+
+            .mobile_menu_button {
+                position: absolute;
+                top: 2.4rem;
+                left: .5rem;
+                border: none;
+            }
+
+            .logo {
+                margin: 0 auto;
+                grid-area: logo;
+                padding: 0.5rem 0.25em;
+            }
+        }
+
+
+        &.desktop {
+            display: none;
+        }
+    }
+
+    body {
+        nav.desktop {
+            display: none;
+        }
+
+        .section_wrapper {
+            margin: 1.5rem 0;
+
+            &.openings_cta {
+                margin: 3rem 0 0;
+            }
+        }
+    }
+
+    nav.mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        padding-left: 3rem;
+        padding-top: 3rem;
+        background: $crim;
+        transform: translate(-110vw);
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+
+        .close_menu {
+            position: fixed;
+            top: 3rem;
+            right: 3rem;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .mobile_wrapper {
+            display: flex;
+            flex-direction: column;
+            // text-align: center;
+
+            &>a {
+                color: #fff;
+                font-size: 2rem;
+                padding: 0.5rem 0;
+                font-weight: 300;
+                text-decoration: none;
+
+                &:hover {
+                    transition: all 0.3s ease-in-out;
+                    text-decoration: underline;
+                }
+
+                &.active {
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    // header
+    .header {
+
+        &>h1 {
+            border-left: none;
+            border-right: none;
+        }
+
+        &>h2 {
+            margin-bottom: 0;
+            padding: 0rem 1rem 0;
+        }
+
+        .openings_cta {
+            flex-direction: column;
+
+            .unit {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas: "apt info info floor";
+
+                :nth-child(1) {
+                    grid-area: apt;
+                }
+
+                :nth-child(2) {
+                    grid-area: info;
+                }
+
+                :nth-child(3) {
+                    grid-area: floor;
+                }
+
+            }
+
+            .mobile_border {
+                border-top: 1px solid $black;
+                margin-top: 2.5rem;
+            }
+        }
+    }
+
+    // ================================
+    //         CONTACT PAGE
+    // ================================
+    .inquiry_form {
+        // max-width: 750px;
+        margin: 0 5%;
+    }
+}
