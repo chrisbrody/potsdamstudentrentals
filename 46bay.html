@@ -1,1 +1,220 @@
-46 bay
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>46 Bay Street - Potsdam Student Rentals</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+  <header class="desktop">
+    <div class="social">F I</div>
+    <div class="logo">
+      Potsdam Student Rentals
+    </div>
+    <div class="phone_number">
+      <a href="tel:3152120939">315-212-0939</a>
+    </div>
+  </header>
+  <nav class="navigation desktop">
+    <a href="./index.html" class="">Home</a>
+    <a href="./about.html" class="">About Us</a>
+    <a href="./rentalinfo.html" class="active">Rental Information</a>
+    <a href="./contact.html" class="">Contact</a>
+    <a href="./comments.html" class="">Tenant Comments</a>    
+  </nav>
+  
+
+  <header class="mobile">
+    <div class="phone_number">
+      <a href="tel:3152120939">315-212-0939</a>
+    </div>
+    <button class="mobile_menu_button" onclick="open_menu(event)">
+      <img class="mobile_menu_button" src="/img/list.svg" alt="list" width="32" height="32">
+    </button>
+    <div class="logo">
+      <span>Potsdam Student Rentals
+    </div>
+    
+  </header>
+  <nav class="mobile">
+    <div class="close_menu" onclick="close_menu(event)">X</div>    
+    <div class="mobile_wrapper">
+      <a href="./index.html" class="">Home</a>
+      <a href="./about.html" class="">About Us</a>
+      <a href="./rentalinfo.html" class="active">Rental Information</a>
+      <a href="./contact.html" class="">Contact</a>
+      <a href="./comments.html" class="">Tenant Comments</a>
+    </div>
+  </nav>
+
+  <section class="header openings_cta section_wrapper">
+    <h1 class="text-center mb-0">46 Bay Street Apartments</h1>
+  </section>
+  <nav>
+    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="unit1-tab" data-bs-toggle="tab" data-bs-target="#unit1" type="button" role="tab" aria-controls="unit1" aria-selected="true">Apartment One</button>
+      <button class="nav-link" id="unit2-tab" data-bs-toggle="tab" data-bs-target="#unit2" type="button" role="tab" aria-controls="unit2" aria-selected="false">Apartment Two</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <!-- APARTMENT ONE -->
+    <div class="tab-pane fade show active" id="unit1" role="tabpanel" aria-labelledby="unit1-tab" tabindex="0">
+        <div class="unit_wrapper">
+            <div></div>
+            <div class="unit_image">
+                <img src="./img/46bay.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="unit_info">
+                <h6>4 Brdm 1.5 Bath House</h6>
+                <h1>46 Bay Street Apt. 1</h1>
+                <p>$X,XXX per person per semester</p>
+                <p class="bold">All Rentals Include</p>
+                <ul>
+                    <li>Keyless Entry</li>
+                    <li>Water</li>
+                    <li>Heat</li>
+                    <li>Electricity</li>
+                    <li>Snow Removal</li>
+                    <li>Internet</li>
+                    <li>Garbage Bags at 1/2 price</li>
+                    <li>On Site Laundry</li>
+                    <li>Off Street Parking</li>
+                </ul>
+                <p>Available June 1, 2023</p>
+            </div>
+            <div></div>
+        </div>
+        <div id="bay46apt1" class="carousel slide" data-bs-ride="carousel">
+            <h2 class="interior">Interior Pictures</h2>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#bay46apt1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/46Bay_Apt1/Kitchen1Apt1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt1/Kitchen2Apt1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt1/Living1RoomApt1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt1/Living2RoomApt1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt1/FullBathApt1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt1/1_2BathApt1.JPG" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bay46apt1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bay46apt1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- APARTMENT TWO -->
+    <div class="tab-pane fade" id="unit2" role="tabpanel" aria-labelledby="unit2-tab" tabindex="0">
+        <div class="unit_wrapper">
+            <div></div>
+            <div class="unit_image">
+                <img src="./img/46bay.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="unit_info">
+                <h6>4 Brdm 1.5 Bath House</h6>
+                <h1>46 Bay Street Apt. 2</h1>
+                <p>$X,XXX per person per semester</p>
+                <p class="bold">All Rentals Include</p>
+                <ul>
+                    <li>Keyless Entry</li>
+                    <li>Water</li>
+                    <li>Heat</li>
+                    <li>Electricity</li>
+                    <li>Snow Removal</li>
+                    <li>Internet</li>
+                    <li>Garbage Bags at 1/2 price</li>
+                    <li>On Site Laundry</li>
+                    <li>Off Street Parking</li>
+                </ul>
+                <p>Available June 1, 2023</p>
+            </div>
+            <div></div>
+        </div>
+        <div id="bay46apt2" class="carousel slide" data-bs-ride="carousel">
+            <h2 class="interior">Interior Pictures</h2>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#bay46apt2" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/46Bay_Apt2/KitchenUp.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/KitchenApt2.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/LivingRoomUp.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/LivingRoomApt2.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/Hallway.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/FullBath.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/46Bay_Apt2/1_2bath.JPG" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bay46apt2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bay46apt2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>To schedule a viewing for 46 Bay Street, please call, text, or email.</p>
+    <a href="tel:3152120939" class="btn btn-outline-secondary">315-212-0939</a>
+    <a href="mail:lojirentals@gmail.com" class="btn btn-outline-secondary">lojirentals@gmail.com</a>
+    <p class="copyright">COPYRIGHT &copy; <script>document.write(new Date().getFullYear());</script> POTSDAM STUDENT RENTALS</p>
+  </footer>
+</body>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+  </script>
+</html>

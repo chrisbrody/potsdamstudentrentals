@@ -25,6 +25,7 @@ close_menu = (event) => {
 
 
 
+
 // $(window).scroll(function(){
     
 //     if( $(this).scrollTop() > 200 ) {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Rental Information - Potsdam Student Rentals</title>
+  <title>Potsdam Student Rentals</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.min.css">
@@ -53,22 +53,100 @@
   <nav class="mobile">
     <div class="close_menu" onclick="close_menu(event)">X</div>    
     <div class="mobile_wrapper">
-      <a href="./index.html" class="">Home</a>
+      <a href="./index.html" class="active">Home</a>
       <a href="./about.html" class="">About Us</a>
-      <a href="./rentalinfo.html" class="active">Rental Information</a>
+      <a href="./rentalinfo.html" class="">Rental Information</a>
       <a href="./contact.html" class="">Contact</a>
       <a href="./comments.html" class="">Tenant Comments</a>
     </div>
   </nav>
 
-  <section class="header section_wrapper openings_cta">
-    <h1 class="text-center">Rental Information Page</h1>
+  <section class="header section_wrapper ">
+    <h2>Our Rental Properties</h2>
+    <div class="openings_cta">
+      <div class="rental_unit">
+        <h3><a href="./5state.html">5 State Street</a></h3>
+        <a href="./5state.html"><img src="./img/5state.jpg" class="img-fluid img-thumbnail" alt="5 state street, potsdam ny" /></a>
+        <h4>2 Units - available June 2023</h4>
+        <div class="unit">
+          <div>Apt #1</div>
+          <div>4 BDRM 1 Bath</div>
+          <div>First Floor</div>
+        </div>
+        <div class="unit">
+          <div>Apt #2</div>
+          <div>5 BDRM 1 1/2 Bath</div>
+          <div>Second Floor</div>
+        </div>
+        <div class="view_property">
+          <a href="./5state.html" class="btn btn-outline-secondary text-uppercase">view 5 State Street property info</a>
+        </div>
+      </div>
+      <div class="rental_unit mobile_border">
+        <h3><a href="./46bay.html">46 Bay Street</a></h3>
+        <a href="./46bay.html"><img src="./img/46bay.jpg" class="img-fluid img-thumbnail" alt="46 bay street, potsdam ny" /></a>
+        <h4>2 Units - available June 2023</h4>
+        <div class="unit">
+          <div>Apt #1</div>
+          <div>4 BDRM 1.5 Bath</div>
+          <div>First Floor</div>
+        </div>
+        <div class="unit">
+          <div>Apt #2</div>
+          <div>4 BDRM 1.5 Bath</div>
+          <div>Second Floor</div>
+        </div>
+        <div class="view_property">
+          <a href="./46bay.html" class="btn btn-outline-secondary text-uppercase">view 46 Bay Street property info</a>
+        </div>
+      </div>
+      <div class="rental_unit mobile_border">
+        <h3><a href="./48bay.html">48 Bay Street</a></h3>
+        <a href="./48bay.html"><img src="./img/48bay.jpg" class="img-fluid img-thumbnail" alt="48 bay street, potsdam ny" /></a>
+        <h4>2 Units - available June 2023</h4>
+        <div class="unit">
+          <div>Apt #1</div>
+          <div>4 BDRM 1.5 Bath</div>
+          <div>First Floor</div>
+        </div>
+        <div class="unit">
+          <div>Apt #2</div>
+          <div>4 BDRM 1.5 Bath</div>
+          <div>Second Floor</div>
+        </div>
+        <div class="view_property">
+          <a href="./48bay.html" class="btn btn-outline-secondary text-uppercase">view 48 Bay Street property info</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  
+  <section class="rental_info">
+    <p class="bold">All Rentals Include</p>
+    <ul>
+      <li>Keyless Entry</li>
+      <li>Water</li>
+      <li>Heat</li>
+      <li>Electricity</li>
+      <li>Snow Removal</li>
+      <li>Internet</li>
+      <li>Garbage Bags at 1/2 price</li>
+      <li>On Site Laundry</li>
+      <li>Off Street Parking</li>
+    </ul>
+  </section>
+
+  <footer>
+    <h5>Contact Us</h5>
+    <p>To schedule a viewing of a rental property, please call, text, or email.</p>
+    <a href="tel:3152120939" class="btn btn-outline-secondary">315-212-0939</a>
+    <a href="mail:lojirentals@gmail.com" class="btn btn-outline-secondary">lojirentals@gmail.com</a>
+    <p class="copyright">COPYRIGHT &copy; <script>document.write(new Date().getFullYear());</script> POTSDAM STUDENT RENTALS</p>
+  </footer>
 </body>
 
 
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </html>

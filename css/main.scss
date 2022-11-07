@@ -125,7 +125,7 @@ nav {
             // height: 468px;
             // margin: 0 auto;
             width: 458px;
-            margin-top: 2rem;
+            // margin-top: 2rem;
         }
 
         h3 {
@@ -194,6 +194,7 @@ footer {
     }
 }
 
+
 // ================================
 //         CONTACT PAGE
 // ================================
@@ -203,7 +204,76 @@ footer {
     margin: 0 auto;
 }
 
+// ================================
+//      RENTAL INFO PAGE
+// ================================
+.rental_info {
+
+    max-width: 1000px;
+    margin: 2rem auto 0;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+// ================================
+//      RENTAL PROPERTY PAGES
+// ================================
+.nav-tabs {
+    padding: 2rem 0;
+    --bs-nav-tabs-border-width: 0;
+
+    .nav-link {
+        color: $black;
+        border: 1px solid $black;
+        border-radius: 0;
+
+        &.active {
+            background-color: $crim;
+            color: $white;
+        }
+    }
+}
+
+.unit_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .unit_info {
+        padding: 0 2rem;
+
+
+    }
+}
+
+h2.interior {
+    padding-top: 2rem;
+}
+
+.carousel {
+    padding: 0 2rem;
+    max-width: 950px;
+    margin: 0 auto;
+
+    img {
+        height: 750px;
+    }
+}
+
+.bold {
+    margin-bottom: 0;
+    // text-decoration: underline;
+    color: $crim;
+    font-weight: bold;
+}
+
+
 // DESKTOP SCREEN
+
 @media (min-width: 1050px) {
     header {
         display: flex;
@@ -234,13 +304,15 @@ footer {
 
     // HOMEPAGE & MORE
     .header {
+        margin-top: 3rem;
 
         &>h1 {
-            padding: 1rem 1rem 1.5rem;
+            padding: 1rem 12rem 1.5rem;
             border-top: none;
             border-left: none;
             border-right: none;
             border-bottom-color: $crim;
+            text-align: center;
 
             a {
                 color: $black;
@@ -260,6 +332,7 @@ footer {
             &>div {
                 color: $black;
                 margin: 0 1rem;
+                margin-top: 2rem;
             }
 
             .view_property {
@@ -302,6 +375,7 @@ footer {
 // MOBILE SCREEN
 @media (max-width: 1049px) {
     header {
+
         &.mobile {
             display: grid;
             grid-template-columns: 1fr;
@@ -423,6 +497,13 @@ footer {
         .openings_cta {
             flex-direction: column;
 
+            h3 {
+                a {
+                    display: inline-block;
+                    margin-top: 2rem;
+                }
+            }
+
             .unit {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -455,5 +536,40 @@ footer {
     .inquiry_form {
         // max-width: 750px;
         margin: 0 5%;
+    }
+
+    // ================================
+    //      RENTAL PROPERTY PAGES
+    // ================================
+    .unit_wrapper {
+        display: block;
+
+        .unit_image {
+            text-align: center;
+        }
+
+        .unit_info {
+            padding: 0 14rem;
+        }
+    }
+}
+
+// PHONE SCREEN 
+@media (max-width: 650px) {
+
+
+    // ================================
+    //      RENTAL PROPERTY PAGES
+    // ================================
+    // Unit Pages 
+    .unit_wrapper {
+        .unit_image {
+            text-align: left;
+            padding: 0 2rem 1rem;
+        }
+
+        .unit_info {
+            padding: 0 2rem;
+        }
     }
 }
