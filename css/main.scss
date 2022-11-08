@@ -144,6 +144,10 @@ nav {
             color: $white;
             padding: 5px;
             margin: 10px 0;
+
+            .available {
+                font-weight: bold;
+            }
         }
 
         .view_property {
@@ -210,13 +214,32 @@ footer {
 .rental_info {
 
     max-width: 1000px;
-    margin: 2rem auto 0;
+
+    &.global {
+
+        margin: 2rem auto 0;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
     ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
+}
+
+.not_rented {
+    // text-decoration: underline;
+}
+
+.rented,
+.not_rented {
+    color: $crim;
+    font-weight: bold;
 }
 
 // ================================
@@ -549,14 +572,29 @@ h2.interior {
         }
 
         .unit_info {
-            padding: 0 14rem;
+            padding: 2rem;
+        }
+    }
+
+    .rental_info {
+        &.global {
+            margin: 2rem 15rem 0;
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     }
 }
 
 // PHONE SCREEN 
-@media (max-width: 650px) {
+@media (max-width: 769px) {
 
+    // MENU BUTTON 
+    header.mobile .mobile_menu_button {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
 
     // ================================
     //      RENTAL PROPERTY PAGES
@@ -570,6 +608,49 @@ h2.interior {
 
         .unit_info {
             padding: 0 2rem;
+
+        }
+    }
+
+    .rental_info {
+
+
+        &.global {
+
+            margin: 2rem 0 0;
+
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .bold {
+                margin: 0 auto;
+                width: 300px;
+            }
+        }
+    }
+
+
+
+    #nav-tabContent {
+        .carousel {
+            padding: 0 0.5rem;
+
+            img {
+                height: 500px;
+            }
+        }
+    }
+
+
+    // ================================
+    //              FOOTER
+    // ================================
+    footer {
+        a.btn.btn-outline-secondary {
+            width: inherit;
         }
     }
 }
