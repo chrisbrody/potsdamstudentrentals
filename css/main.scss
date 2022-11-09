@@ -45,10 +45,7 @@ header {
         font-size: 22px;
     }
 
-    .phone_number {}
-
-    .phone_number,
-    .social {
+    .phone_number {
         font-size: 22px;
 
         a {
@@ -56,21 +53,23 @@ header {
             text-decoration: none;
         }
     }
+
+    .social {
+        display: none;
+    }
 }
 
 
 // NAVIGATION
 nav {
     &.navigation.desktop {
-        margin: 0 auto;
         background: $crim;
-        padding: 25px;
+        padding: 1.5rem 1rem;
 
         a {
             text-decoration: none;
             color: #fff;
             font-size: 1.2rem;
-            margin: 0 2rem;
 
             &:hover {
                 color: rgba(255, 255, 255, 0.7);
@@ -89,7 +88,7 @@ nav {
 
 
     &.desktop {
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 
@@ -300,7 +299,7 @@ h2.interior {
 @media (min-width: 1050px) {
     header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 1.5rem 1rem;
         align-items: center;
 
@@ -578,11 +577,15 @@ h2.interior {
 
     .rental_info {
         &.global {
-            margin: 2rem 15rem 0;
+            margin: 2rem 2rem 0;
 
             ul {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+
+        ul {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -629,6 +632,10 @@ h2.interior {
                 margin: 0 auto;
                 width: 300px;
             }
+        }
+
+        ul {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
