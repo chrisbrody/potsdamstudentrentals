@@ -25,30 +25,70 @@ close_menu = (event) => {
 
 
 
+const submit_contact_form = document.getElementById('submit_contact_form')
+const errorDiv = document.getElementById('errorDiv')
 
-// $(window).scroll(function(){
+const validateForm = (e) => {
+
+    let usersProperty = document.getElementById('properties').value,
+        usersName = document.forms["myForm"]["users_name"].value,
+        usersEmail = document.forms["myForm"]["email_address"].value,
+        usersPhone = document.forms["myForm"]["phone_number"].value,
+        userMessage = document.forms["myForm"]["additional_message"].value,
+        validEmail = false
+
+    // stop if all fields aren't filled out
+    if(!usersName || !usersEmail || !usersPhone) {
+        errorDiv.innerText = 'Please fill out the whole form'
+        return false
+    }
+
+    // stop if Cryto or cryto is in the username
+    if (usersName.includes('Cryto') || usersName.includes('cryto')) {
+        errorDiv.innerText = 'Error submitting, please try again'
+        return false
+    }
+
+    // validate email
+    if(usersEmail) {
+        validEmail = validateEmail(usersEmail)
+        // if email is invalid return error message
+        if(!validEmail === true) {
+            errorDiv.innerText = 'Email invalid, try again'
+            return false
+        }
+    } 
     
-//     if( $(this).scrollTop() > 200 ) {
-//         console.log($(this))[0][0];
-//     }
-// });
+    // reformat usersPhone
+    if(usersPhone) {
+        usersPhone = formatPhoneNumber(usersPhone)
+    }
 
-// const checkScreenSize = () => {
-//     console.log('checking screen size...');
+    if(userMessage.includes('http')) {
+        errorDiv.innerText = 'illegal message, try again'
+        return false
+    }
     
-//     let window_x = window.innerWidth;
-//     let window_y = window.innerHeight;
+    return true
+}
+
+const validateEmail = (email) => {
+    let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return res.test(email);
+}
+
+const formatPhoneNumber = (str) => {
+    //Filter only numbers from the input
+    let cleaned = ('' + str).replace(/\D/g, '');
     
-//     // console.log(window_x, window_y)
+    //Check if the input is of correct length
+    let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  
+    if (match) {
+      return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    };
+  
+    return null
+};
 
-//     if(window_x <= 1000) {
-//         console.log('do mobile menu things')
-        
-//     } else {
-//         console.log('do desktop menu things')
-//     }
-// }
-
-// window.onload = checkScreenSize() 
-// window.onresize = checkScreenSize 
-
+submit_contact_form.addEventListener("click", validateForm)
